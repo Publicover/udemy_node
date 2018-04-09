@@ -34,6 +34,8 @@ MODULES
 'fs' file system
 'lodash' allows methods that manipulat objects, arrays, numbers, strings, etc.
 'yargs' validates and allows formatting of input
+'request' allows calls to https--it needs options and three specific arguments
+  // request({}, (error, response, body) => {})
 
 OBJECTS
 process is global environment--the node version of 'browser'
@@ -65,6 +67,8 @@ setTimeout(() => {function}, 2000) //args: function, time in miliseconds until
                                    //call
 pretty print:
   use JSON.stringify(object, filter-out-properties, spaces-per-identation)
+encodeURIComponent('string with spaces') //outputs string for URI
+decodeURIComponent('string%with%percent%signs') //outputs regular string
 
 when using module.exports = {};, you can omit colon and second string if they
   are exactly the same
@@ -99,16 +103,11 @@ arrow functions do not bind 'this' keyword
   if you need 'this' keyword, use following syntax:
     var sayHiAlt () {console.log(`${this.whatever}`)}
 arguments keyword array returns argument array of global object
-fax to handwritten request:
-  name dob
-  where records sent dr name fax number
-  what records you want to send (all of them)
-  signature
-  contact phone number
-  fax to 919-684-1777 write urgent at the top
-
 
 ASYNC
 need to use callbacks
 callback function: function that gets passed as argument of another function and
   is executed after an event
+
+PROMISES
+solve problems caused by async programs
